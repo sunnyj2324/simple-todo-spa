@@ -7,18 +7,23 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
   <div id="wrap">
-    <h1>Todos</h1>
-    <form id="todo-form" autocomplete="off">
-      <input type="text" name="title">
-      <input type="submit" value="전송">
-    </form>
-    <div id="todos">loading...</div>
+      <div class="to-do-list">
+        <h1>To Do List</h1>
+        <form id="todo-form" autocomplete="off" class="input input--isao">
+          <input type="text" name="title" class="input__field input__field--isao" id="input-38"> <!-- name이나 id로 되어있는 값을 indes.js에  title: form.elements.title.value 의 방법으로 사용가능 -->
+          <label type="submit" value="write" class="input__label input__label--isao" for="input-38" data-content="write">
+              <span class="input__label-content input__label-content--isao">write todos</span>
+          </label>
+        </form> <!--순수한 폼을 이용하는게 아니라 자바스크립트에서 필요한 정보를 넣고있기때문에 내용이 다름-->
+        <div id="todos">loading...</div> <!--렌더링한 ejs를 넣어줌-->
+     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-  <script src="/vendor/ejs.min.js"></script>
+  <script src="/vendor/ejs.min.js"></script> <!--템플렛엔진-->
   <script src="/common.js"></script>
   <script src="/index.js"></script>
 </body>

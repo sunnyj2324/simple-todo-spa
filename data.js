@@ -1,5 +1,5 @@
-let todoSeq = 1
-const todos = [
+let todoSeq = 1 //식별자로 쓰이는 변수를 따로둠
+const todos = [ //data.todos
   {
     id: todoSeq++,
     title: "sample todo",
@@ -44,4 +44,4 @@ module.exports = {
   addTodo,
   updateTodo,
   deleteTodo
-}
+}  //node.js모듈이 자료를 공유할수없지만 exports를 하면 다른모듈에서 불러와서 사용할수 있다.(공개)
